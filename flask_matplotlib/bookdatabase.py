@@ -4,8 +4,7 @@ from itertools import groupby
 from operator import itemgetter
 from datetime import datetime
 app = Flask(__name__)
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+
 app.config.from_pyfile('app.cfg')
 db = SQLAlchemy(app)
 
