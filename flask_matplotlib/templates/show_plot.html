@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <body>
+    <h1>Flask and matplotlib</h1>
+
+
+        <div class="row" style="margin-left: 40px">
+              <div class="circle">{{ capital_letter }}</div>
+            {% if book_chapter_answers_word_count|length == 0 %}
+                    <h4 style="color: blueviolet;"><b>
+                        You have not completed any chapters.
+                    </b></h4>
+            {% else %}
+                {% for book_title, chapter_word_count in book_chapter_answers_word_count %}
+                    <h4 style="color: blueviolet;"><b> &#8209
+                        {{book_title }}: completed chapter {{chapter_word_count}}
+
+                        <h3>Plot as a png</h3>
+                            <img src="/matplot-as-image-{{book_title}}.png"
+                                 alt="random points as png"
+                                 height="300">
+
+                    </b></h4>
+                {% endfor %}
+            {% endif %}
+         </div>
+
+
+   </body>
+</html>
